@@ -1,0 +1,31 @@
+{
+  "name": "express-typeorm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.ts",
+    "app:up": "pnpm db:start && pnpm start",
+    "db:start": "docker-compose up -d",
+    "db:migration:generate": "typeorm migration:generate database/migrations/test -d .data-source.ts",
+    "db:migration:run": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "nodemon": "^3.1.0",
+    "prettier": "3.2.5",
+    "prisma": "^5.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "express": "^4.18.3"
+  }
+}
